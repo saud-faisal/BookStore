@@ -1,0 +1,151 @@
+/* header.html*/
+body{
+	margin: 0;
+	border: 0;
+}
+.header{
+	position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+	height: 80px;
+	width: 100%;
+	padding: 30px;
+	background-color: coral;
+	box-shadow: -6px 4px gray;
+	box-sizing:border-box;
+	z-index: 1;
+}
+.header .logo{
+	color: white;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-style: bold;
+	word-spacing: 5px;
+}
+.links{
+	float: right;
+}
+.links a{
+	text-decoration: none;
+	font-size: 20px;
+	font-family: sans-serif;
+	font-style: bold;
+	padding: 5px;
+	color: white;
+}
+.links a:hover{
+	background-color: gray;
+}
+/* registration.html and login.html */
+body{
+	border: 0;
+	margin: 0;
+	overflow: auto;
+}
+.main{
+	position: relative;
+	height: 400px;
+	width: 600px;
+	margin: 200px;
+	box-shadow: 2px -2px lightgray;
+	box-sizing:border-box;
+
+}
+.main .content{
+	position: absolute;
+	left: 0;
+	height: 100%;
+	width: 200px;
+	background-color: coral;
+}
+.main .content h1{
+	font-size: 20px;
+	font-family: sans-serif;
+	margin-top: 100px;
+	color: white;
+	text-align: center;
+}
+.main .content p{
+	font-size: 14px;
+	font-family: sans-serif;
+	color: white;
+	text-align: center;
+	padding: 20px
+}
+.main .inner{
+	position: absolute;
+	padding-left: 30px;
+	padding-right: 30px;
+	right: 0;
+	display: block;
+	width: 400px;
+	height: 100%;
+	font-family: sans-serif;
+	display: block;
+	box-sizing:border-box;
+}
+h1{
+	font-size: 20px;
+	font-family: sans-serif;
+}
+.main .inner input[type="text"],input[type="password"],select,input[type="email"]{
+	width: 100%;
+	height: 30px;
+	background-color: white;
+	margin-top: 10px;
+	border: none;
+	border-bottom:1px solid black;
+}
+.main .inner input[type="submit"]{
+	color: white;
+	height: 30px;
+	width: 90px;
+	margin-top: 30px;
+	font-family: sans-serif;
+	border:none;
+	border-radius: 5px;
+	background-color: coral;
+}
+.main .inner input[type="submit"]:hover{
+	background-color: black;
+}
+/* books.html */
+.card{
+	display: inline-block;
+	height: 350px;
+	width: 200px;
+	margin: 8px;
+
+	box-shadow: -3px 3px gray;
+}
+.card img{
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+.card-body{
+	margin:0px;
+	height:50%;
+	width:100%;
+	padding-left: 8px;
+	box-sizing: border-box;
+
+}
+.card-body .title{
+
+}
+.card-body label{
+	display: block;
+	line-height: 24px;
+	font-size: 16px;
+}
+.card-body a{
+	display: block;
+	margin-top: 8px;
+	border-radius: 2px;
+	width: 34px;
+	background-color: blue;
+	color: white;
+	padding: 8px;
+	text-decoration: none;
+}

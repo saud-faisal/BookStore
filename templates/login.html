@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{%load static%}
+<html>
+<head>
+	<link rel="stylesheet" href="{%static 'css/style.css'%}">
+</head>
+<body>
+{%include "header.html"%}
+<div class="main">
+	<div class="content">
+		<h1>Already have an account</h1>
+		<p>Create an account to see lots of books of your choice</p>
+	</div>
+    <div class="inner">
+    	<h1>Create Account</h1>
+    <form action='{%url "login"%}' method="POST">
+		{% csrf_token %}
+		<input type='text' name='regno' placeholder='Registration number' required>
+    <input type='email' name='email' placeholder='ex@gmail.com' required>
+		<input type='password' name='pass' placeholder='password' required>
+		<input type='submit' name='signUp' value='submit'>
+		<input type='submit' name='cancel' value='cancel'>
+	</form>
+  </div>
+</div>
+</body>
+</html>
