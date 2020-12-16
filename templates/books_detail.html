@@ -1,0 +1,15 @@
+{%extends "header.html"%}
+{%block content%}
+{%load static%}
+
+      <div class="card">
+      <img class="card-img-top" src={{recs.imag.url}} alt="Card image" width="100%" height="40%">
+      <div class="card-body">
+        <h4 class="title">{{books.bookname}}</h4>
+          <label>{{books.authorname}}</label>
+          <label>{{books.Publication}}</label>
+          <label>{{books.Isbn}}</label>
+          <label>{{books.date}}</label>
+      </div>
+      </div>
+{%endblock%}

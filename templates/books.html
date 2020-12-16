@@ -1,15 +1,8 @@
-<!DOCTYPE html>
+{%extends "header.html"%}
+{%block content%}
 {%load static%}
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="stylesheet" href="{%static 'css/style.css'%}">
-  </head>
-  <body>
-  {%include 'header.html'%}
-    <!-- <div class="card-columns"> -->
-      {% for recs in rec %}
+
+      {% for recs in books%}
       <div class="card">
       <img class="card-img-top" src={{recs.imag.url}} alt="Card image" width="100%" height="40%">
       <div class="card-body">
@@ -18,10 +11,8 @@
           <label>{{recs.Publication}}</label>
           <label>{{recs.Isbn}}</label>
           <label>{{recs.date}}</label>
-          <a href="{%url 'proj' Pk=recs.Isbn %}" class="btn btn-primary">Issue</a>
+          <a href="{%url 'booksdetailview' pk=recs.pk %}" class="btn btn-primary">Issue</a>
       </div>
       </div>
       {%endfor%}
-    <!-- </div> -->
-  </body>
-</html>
+{%endblock%}

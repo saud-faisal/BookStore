@@ -15,6 +15,6 @@ class Books(models.Model):
     authorname=models.CharField(max_length=50)
     Publication=models.CharField(max_length=50)
     Isbn=models.CharField(max_length=50)
-    imag=models.ImageField(upload_to='images',blank=True)
+    imag=models.ImageField(upload_to='images/',blank=True)
     date=models.DateField()
     time=models.TimeField(auto_now=True)

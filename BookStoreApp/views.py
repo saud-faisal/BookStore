@@ -2,6 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse,HttpResponseRedirect
 from BookStoreApp.models import regData,Books
 from django.urls import reverse
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 def RegForm(request):
     if request.method=='POST':
@@ -33,6 +35,17 @@ def Loginpage(request):
             return render(request,'books.html',{'rec':showObj})
     else:
         return render(request,'login.html')
+
+class BooksListView(ListView):
+	model=Books
+	queryset=Books.objects. all()
+	context_object_name="books"
+	template_name="books.html"
+
+class BooksDetailView(DetailView):
+	model=Books
+	template_name="books_detail.html"
+
 def pro(request,Pk):
     b=Books.objects.filter(Isbn=Pk)
     print(b)

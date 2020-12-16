@@ -1,11 +1,8 @@
-<!DOCTYPE html>
+
+{%extends "header.html"%}
+{%block content%}
 {%load static%}
-<html>
-<head>
-	<link rel="stylesheet" href="{%static 'css/style.css'%}">
-</head>
-<body>
-{%include "header.html"%}
+
 <div class="main">
 	<div class="content">
 		<h1>Already have an account</h1>
@@ -48,5 +45,4 @@
 		alert("your registration no is :");
 	}
 </script> -->
-</body>
-</html>
+{%endblock%}

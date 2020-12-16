@@ -23,5 +23,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('registration/',views.RegForm,name='registration'),
     path('login/',views.Loginpage,name='login'),
-    path('<Pk>/proj/',views.pro,name='proj'),
-]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
+    path('booksdetailview/<int:pk>',views.BooksDetailView.as_view(),name='booksdetailview'),
+    path("booklistview/",views.BooksListView.as_view(),name="bookslistview"),
+    ]+static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
